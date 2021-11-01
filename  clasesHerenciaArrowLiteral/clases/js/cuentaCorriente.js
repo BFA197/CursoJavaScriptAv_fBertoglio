@@ -7,6 +7,6 @@ class CuentaCorriente extends Cuenta {
    if(numero <= this.sal + this.descubierto) this.sal -= numero ;
  }
    toString(){
-     return  `Cuenta Corriente:  + ${super.toString()} + <br/>descubierto:  + ${this.descubierto}` ;
+     return  `Cuenta Corriente:   ${super.toString()}  <br/>descubierto:   ${this.descubierto}` ;
    }
 }
