@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Clase cuentas</title>
-    <script src="cuentas.js" charset="utf-8"></script>
+    <script src="cajadeAhorro.js" charset="utf-8"></script>
+    <script src="CuentaCorriente.js" charset="utf-8"></script>
   </head>
   <body>
     <h1>clase cuentas tiene Numero de cuenta y dinero en cuenta </h1>
@@ -15,6 +16,9 @@
       document.write("<br/>dinero en cuenta despues de debitar: " + cuenta.sal);
       cuenta.acreditar( 200 );
       document.write("<br/>dinero en cuenta despues de acreditar: " + cuenta.sal);
+
+      document.write("<br/><br/><br/>Prueba del toString: " + cuenta.toString());
+
     </script>
   </body>
 </html>
