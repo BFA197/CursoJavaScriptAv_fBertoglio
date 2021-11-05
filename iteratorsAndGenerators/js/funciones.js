@@ -8,3 +8,10 @@ function createIterator( array ){
           }
         };
 }
+function *gen() {
+          let i = 1;
+          while (true){
+            yield i;
+            i = i * 2;
+          }
+}

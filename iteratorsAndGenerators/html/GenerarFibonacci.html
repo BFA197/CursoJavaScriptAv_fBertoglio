@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Fibonacci</title>
-    <script src="fibonacci.js" charset="utf-8"></script>
+    <script src="../js/fibonacci.js" charset="utf-8"></script>
   </head>
   <body>
     <h1>Vamos a recorrer una coleccion de cuentas </h1>
     <script type="text/javascript">
       let fibonacci = fib();
-      console.log(fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next(),fibonacci.next());
-
+      for(var i = 0; i < 10; i++ ) console.log(fibonacci.next());
     </script>
   </body>
 </html>

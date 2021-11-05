@@ -12,7 +12,8 @@
       //let arr = ;
       let it = createIterator([1,2,3,4,5,6,7,8,9]);
       let ret = { done: true };
-      let show = "";
+      let show = JSON.stringify( it.next());
+      document.write(`<br/><br/>Figuras: ${show}`);
       console.log( it.next() );console.log( it.next() );console.log( it.next() );console.log( it.next() );console.log( it.next() );
       console.log( it.next() );console.log( it.next() );console.log( it.next() );console.log( it.next() );console.log( it.next() );
 show = it.next();console.log( show );
