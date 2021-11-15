@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cuenta Figura</title>
+
+    <!--cuentas -->
+    <script src="../../ clasesHerenciaArrowLiteral/clases/js/cuentas.js" charset="utf-8"></script>
+    <script src="../../ clasesHerenciaArrowLiteral/clases/js/cajadeAhorro.js" charset="utf-8"></script>
+    <script src="../../ clasesHerenciaArrowLiteral/clases/js/CuentaCorriente.js" charset="utf-8"></script>
+    <script src="../../clasesFigura/js/figura.js" charset="utf-8"></script>
+    <script src="../../clasesFigura/js/circulo.js" charset="utf-8"></script>
+    <script src="../../clasesFigura/js/rectangulo.js" charset="utf-8"></script>
+    <script src="../../clasesFigura/js/triangulo.js" charset="utf-8"></script>
+    <script src="../../clasesFigura/js/cuadrado.js" charset="utf-8"></script>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Vamos a recorrer las cuentas</h1>
+  <script type="text/javascript">
+      let cuentas =new Array(new CajaDeAhorro(1,1000,2.3),
+                                  new CuentaCorriente(2,2000,1000 ),
+                                  new CajaDeAhorro(3,3000, 5.2),
+                                  new CuentaCorriente(4,5000,3000 ),
+                                  new CajaDeAhorro(5,1500, 3.3),
+                                  new CuentaCorriente(6,2500,1300 )   );
+      let figuras = new Array(
+                              		new Circulo('Circulo1', 10),
+                              		new Circulo('Circulo2', 100),
+                              		new Cuadrado('Cuadrado1', 125),
+                              		new Cuadrado('Cuadrado2', 20),
+                              		new Rectangulo('Rectangulo1', 104, 102),
+                              		new Rectangulo('Rectangulo2', 20, 20),
+                              		new Triangulo('Triangulo1', 10, 10),
+                              		new Triangulo('Triangulo2', 200, 20)
+                              	);
+        fn_MostrarArray( ()=> {
+            cuentas.forEach((cuenta, i) => {
+                document.write(`<br/><br/>cuenta[${i}]
+                           <br/>cuenta=${cuenta}`);
+            });
+
+        },30);
+
+        fn_MostrarArray( ()=> {
+            document.write("<br/>-----------------------------------------------------<br/>")
+            figuras.forEach((figura, i) => {
+                document.write(`<br/><br/>figura[${i}]
+                           <br/>figura=${figura}`);
+            });
+
+        },45);
+
+        fn_MostrarArray( ()=> {
+          document.write("<br/>-----------------------------------------------------<br/>")
+            cuentas.filter (cuenta=>cuenta.saldo>1500)
+                    .forEach((cuenta, i) => {
+                document.write(`<br/><br/>cuenta[${i}]
+                           <br/>cuenta=${cuenta}`);
+            });
+
+        },15);
+
+        fn_MostrarArray( ()=> {
+          document.write("<br/>-----------------------------------------------------<br/>")
+            figuras.filter (figura=>figura.calcularSuperficie()>50)
+                    .forEach((figura, i) => {
+                        document.write(`<br/><br/>figura[${i}]
+                        <br/>figura=${figura}`);
+            });
+
+        },90);
+
+        fn_MostrarArray( ()=> {
+            figuras.filter (figura=>figura.calcularPerimetro()<100)
+                    .forEach((figura, i) => {
+                document.write(`<br/><br/>figura[${i}]
+                           <br/>figura=${figura}`);
+            });
+
+        },105);
+
+
+
+  </script>
+  </body>
+</html>
